@@ -1,23 +1,31 @@
-declare module "snowflake-api" {
+declare module "zyrouge-api" {
 export class API {
     constructor(Token: string);
-
-    public chatbot(message: string, name: string, gender: string, userid: string): Promise<string>;
-    public token(): Promise<String>;
-    public meme(subreddit: string): Promise<Object>;
-    public cat(): Promise<ArrayBuffer>;
-    public dog(): Promise<ArrayBuffer>;
-    public duck(): Promise<ArrayBuffer>; 
-    public fox(): Promise<ArrayBuffer>;
+    public balloon(text1: string, text2: string, text3: string): Promise<Buffer>;
+    public blur(image: string): Promise<Buffer>;
+    public bright(image: string): Promise<Buffer>;
+    public captcha(image: string): Promise<Buffer>;
+    public catfact(): Promise<String>;
+    public cmm(message: string): Promise<Buffer>;
+    public dogfact(): Promise<String>;
+    public deepfry(image: string): Promise<Buffer>;
+    public eightball(): Promise<String>;
+    public fade(image: string): Promise<Buffer>;
+    public fortune(): Promise<String>;
+    public gah(): Promise<Buffer>;
+    public gray(image: string): Promise<Buffer>;
+    public hug(): Promise<Buffer>;
+    public invert(image: string): Promise<Buffer>;
+    public lyrics(song: string): Promise<Object>;
+    public comment(image: string, username: string, message: string): Promise<Buffer>;
+    public pixel(image: string): Promise<Buffer>;
     public roast(): Promise<String>;
-    public pokemon(name: string): Promise<Object>;
-    public morse(message: string, type: string): Promise<String>;
-    public registry(query: string, registry: string): Promise<Object>;
-    public reverse(message: string): Promise<String>;
-    public tokeninfo(token: string): Promise<Object>;
-    public base64(message: string, type: string): Promise<String>;
-    public me(): Promise<Object>;
-    public on(error): error
+    public sepia(image: string): Promise<Buffer>;
+    public ship(image1: string, image2:string): Promise<Buffer>;
+    public trigger(image: string): Promise<Buffer>;
+    public tweet(image: string, username: string, message: string): Promise<Buffer>;
+    public wtp(text2: string, text1:string): Promise<Buffer>;
+    public wyr(nsfw: boolean): Promise<Object>;
 }
 
 export const version: string;

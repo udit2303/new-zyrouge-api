@@ -1,5 +1,5 @@
 {
-  "name": "zyrouge-api",
+  "name": "new-zyrouge-api",
   "version": "1.0.0",
   "description": "A simple & easy to use Wrapper for server.zyrouge.gq/api",
   "main": "index.js",
@@ -12,24 +12,22 @@
   },
   "keywords": [
     "API",
-    "NSFW",
-    "discord",
+    "discord api",
     "discord.js",
     "meme",
-    "api",
-    "pat",
     "wouldyourather",
     "weather",
     "roast",
-    "joke",
-    "changemymind"
+    "changemymind",
+    "invert",
+    "image api"
   ],
   "author": "Udit Shrivastava <udit2303@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/udit2303/zyrouge-api/issues"
+    "url": "https://github.com/udit2303/new-zyrouge-api/issues"
   },
-  "homepage": "https://github.com/udit2303/zyrouge-api#readme",
+  "homepage": "https://github.com/udit2303/new-zyrouge-api#readme",
   "dependencies": {
     "node-fetch": "^2.6.1"
   }

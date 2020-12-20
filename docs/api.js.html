@@ -1,4 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source: api.js</title>
 
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.6/fuse.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="styles/skyceil.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="utilities">
+        <div id="search">
+            <input type="text" id="search-box" placeholder="Search for stuffs..."><br>
+            <div id="search-results" style="display: none;"></div>
+        </div>
+        <button class="theme" data-theme="light"><i class="fas fa-moon"></i></button>
+    </div>
+    <hr>
+    <h4><a href="index.html">Home</a></h4><h5 class="no-bottom must-underline">Classes</h5><ul><li><span class="small-icon C">C</span><b><a href="API.html">API</a></b><ul class="has-class-methods"><li><span class="small-icon F">F</span><a href="API.html#balloon">balloon</a></li><li><span class="small-icon F">F</span><a href="API.html#blur">blur</a></li><li><span class="small-icon F">F</span><a href="API.html#bright">bright</a></li><li><span class="small-icon F">F</span><a href="API.html#captcha">captcha</a></li><li><span class="small-icon F">F</span><a href="API.html#catfact">catfact</a></li><li><span class="small-icon F">F</span><a href="API.html#cmm">cmm</a></li><li><span class="small-icon F">F</span><a href="API.html#comment">comment</a></li><li><span class="small-icon F">F</span><a href="API.html#deepfry">deepfry</a></li><li><span class="small-icon F">F</span><a href="API.html#dogfact">dogfact</a></li><li><span class="small-icon F">F</span><a href="API.html#eightball">eightball</a></li><li><span class="small-icon F">F</span><a href="API.html#fade">fade</a></li><li><span class="small-icon F">F</span><a href="API.html#fortune">fortune</a></li><li><span class="small-icon F">F</span><a href="API.html#gah">gah</a></li><li><span class="small-icon F">F</span><a href="API.html#gray">gray</a></li><li><span class="small-icon F">F</span><a href="API.html#hug">hug</a></li><li><span class="small-icon F">F</span><a href="API.html#invert">invert</a></li><li><span class="small-icon F">F</span><a href="API.html#lyrics">lyrics</a></li><li><span class="small-icon F">F</span><a href="API.html#pixel">pixel</a></li><li><span class="small-icon F">F</span><a href="API.html#roast">roast</a></li><li><span class="small-icon F">F</span><a href="API.html#sepia">sepia</a></li><li><span class="small-icon F">F</span><a href="API.html#ship">ship</a></li><li><span class="small-icon F">F</span><a href="API.html#trigger">trigger</a></li><li><span class="small-icon F">F</span><a href="API.html#tweet">tweet</a></li><li><span class="small-icon F">F</span><a href="API.html#wtp">wtp</a></li><li><span class="small-icon F">F</span><a href="API.html#wyr">wyr</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    <div class="burger">
+        <div class="burger-line-1"></div>
+        <div class="burger-line-2"></div>
+        <div class="burger-line-3"></div>
+    </div>
+
+    <h1 class="page-title">Source: api.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
 const Error = require('./APIError');
 const base = 'https://server.zyrouge.gq/api/'
 const fetch = require("node-fetch");
@@ -15,7 +63,7 @@ class API extends EventEmitter{
         super();
         if(!Token) throw new Error("No API TOKEN was Provided");
         if(typeof(Token) != 'string') throw new Error("Invalid type of API Key was provided");
-        token = 'Bearer ' + Token;
+        token = 'bearer ' + Token;
     }
     /** 
      * @param {string} text1  Text 1 to apprear
@@ -25,7 +73,7 @@ class API extends EventEmitter{
      */
     async balloon(text1, text2, text3){
         if(!text1 || !text2 || !text3) throw new Error("Inavlid parameters provided! Please check the docs");
-        const res = await fetch(base + `balloon?text1=${text1}&text2=${text2}&text3=${text3}`,{
+        const res = await fetch(base + `balloon?text1=${text1}&amp;text2=${text2}&amp;text3=${text3}`,{
             headers:{
                 Authorization: token
             }
@@ -527,7 +575,7 @@ class API extends EventEmitter{
     }
     /**
      * @param {string} song The song name
-     * @returns {object} An object containing information about the song & its lyrics 
+     * @returns {object} An object containing information about the song &amp; its lyrics 
      */
     async lyrics(song){
         if(!song) throw new Error("No Song Name Provided!");
@@ -572,7 +620,7 @@ class API extends EventEmitter{
         if(!username) throw new Error("No username Provided!");
         if(!message) throw new Error("No message Provided!");
 
-        const res = await fetch(base + `phubcomment?image=${image}&username=${username}&message=${message}`,{
+        const res = await fetch(base + `phubcomment?image=${image}&amp;username=${username}&amp;message=${message}`,{
             headers:{
                 Authorization: token
             }
@@ -712,7 +760,7 @@ class API extends EventEmitter{
     async ship(image1, image2){
         if(!image1) throw new Error("First Image URL not Provided!");
         if(!image2) throw new Error("Second Image URL not Provided!");
-        const res = await fetch(base + `ship?image1=${image1}&image2=${image2}`,{
+        const res = await fetch(base + `ship?image1=${image1}&amp;image2=${image2}`,{
             headers:{
                 Authorization: token
             }
@@ -787,7 +835,7 @@ class API extends EventEmitter{
         if(!username) throw new Error("No username Provided!");
         if(!message) throw new Error("No message Provided!");
 
-        const res = await fetch(base + `tweet?image=${image}&username=${username}&message=${message}`,{
+        const res = await fetch(base + `tweet?image=${image}&amp;username=${username}&amp;message=${message}`,{
             headers:{
                 Authorization: token
             }
@@ -824,7 +872,7 @@ class API extends EventEmitter{
         if(!text1) throw new Error("Text 1 not Provided!");
         if(!text2) throw new Error("Text 2 not Provided!");
 
-        const res = await fetch(base + `winniethepooh?text1=${text1}&text2=${text2}`,{
+        const res = await fetch(base + `winniethepooh?text1=${text1}&amp;text2=${text2}`,{
             headers:{
                 Authorization: token
             }
@@ -889,4 +937,24 @@ class API extends EventEmitter{
     
     
 }
-module.exports = API;
+module.exports = API;</code></pre>
+        </article>
+    </section>
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.6</a> on Sun Dec 20 2020 20:29:34 GMT+0530 (India Standard Time) using <a href="https://github.com/devsnowflake/jsdoc-skyceil">Skyceil Theme</a>
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+
+</body>
+</html>
