@@ -1,5 +1,5 @@
 
-# Snowflake-API
+# Zyrouge-API
 
 Quick [Zyrouge API](https://server.zyrouge.gq/dashboard) wrapper for beginners.
 
@@ -42,7 +42,7 @@ api.catfact().then(console.log).catch(e => console.log(e));
 
 
 # Links
-- **[Documentation](https://new-snowflake-api.js.org)**
+- **[Documentation](https://new-zyrouge-api.js.org)**
 - **[Discord Support Server](https://discord.gg/mDQQHG9u4k)**
 - **[GitHub](https://github.com/udit2303/new-zyrouge-api)**
 
