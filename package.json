@@ -1,6 +1,6 @@
 {
   "name": "new-zyrouge-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple & easy to use Wrapper for server.zyrouge.gq/api",
   "main": "index.js",
   "scripts": {
