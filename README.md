@@ -39,10 +39,11 @@ api.catfact().then(console.log).catch(e => console.log(e));
 
 
 ```
-
+# Documentation
+A list of all functions is available at [https://zyrouge-api.udit.gq](https://zyrouge-api.udit.gq)
 
 # Links
-- **[Documentation](https://new-zyrouge-api.js.org)**
+- **[Documentation](https://zyrouge-api.udit.gq)**
 - **[Discord Support Server](https://discord.gg/mDQQHG9u4k)**
 - **[GitHub](https://github.com/udit2303/new-zyrouge-api)**
 
