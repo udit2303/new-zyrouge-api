@@ -5,7 +5,7 @@ Quick [Zyrouge API](https://server.zyrouge.gq/dashboard) wrapper for beginners.
 
   
 
-![New Snowflake-API](https://nodei.co/npm/new-zyrouge-api.png)
+![New Zyrouge-API](https://nodei.co/npm/new-zyrouge-api.png)
 
   
 
@@ -44,7 +44,7 @@ api.catfact().then(console.log).catch(e => console.log(e));
 # Links
 - **[Documentation](https://new-snowflake-api.js.org)**
 - **[Discord Support Server](https://discord.gg/mDQQHG9u4k)**
-- **[GitHub](https://github.com/DevSnowflake/snowflake-api)**
+- **[GitHub](https://github.com/udit2303/new-zyrouge-api)**
 
 
 
