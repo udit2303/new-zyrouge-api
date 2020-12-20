@@ -4,7 +4,7 @@
   "description": "A simple & easy to use Wrapper for server.zyrouge.gq/api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "repository": {
     "type": "git",
